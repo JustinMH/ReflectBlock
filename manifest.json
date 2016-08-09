@@ -1,0 +1,21 @@
+{
+	"name" : "ReflectBlock",
+	"description" : "Chrome extension that blocks distracting sites until you've written about what you could be doing instead.",
+	"content_scripts": [{
+		"js": [ "defaults.js", "dosomething.js" ],
+		"matches": [ "\u003Call_urls>" ],
+		"run_at": "document_start"
+   	}],
+   	"background": {
+    	"scripts": [ "defaults.js", "background.js" ]
+   	},
+   	"description": "Demand an explanation from yourself as to why you're visiting a time-wasting site.",
+	"version" : "1.0",
+	"minimum_chrome_version" : "9",
+	"manifest_version" : 2,
+	"options_ui" : {
+		"page" : "options.html",
+		"chrome_style" : true
+	},
+	"permissions": [ "storage" ]
+}

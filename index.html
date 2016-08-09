@@ -1,0 +1,69 @@
+<html>
+<head>
+<style>
+#content {
+	margin-left: 100pt;
+}
+#content div {
+	padding: 5px;
+}
+#buttons button {
+	float: left;
+	padding: 5px;
+}
+#buttons span {
+	float: left;
+}
+#explain-container {
+	clear: both;
+}
+.clear {
+	clear: both;
+}
+</style>
+<script type="text/javascript">
+	console.log("omg, here we are");
+</script>
+</head>
+<body>
+<div id="content">
+	<div>Will visiting this website help you acheive your goals for the day?</div>
+	<div id="buttons">
+		<span id="timer"></span>
+		<button id="yes1">Yes</button>
+		<button id="no1">No</button>
+	</div>
+	<div class="clear" id="question2" style="display: none;">
+		What could you be doing instead and who will you be in the future if you choose to do those things?
+	</div>
+	<div class="clear" id="question3" style="display: none;">
+		What will you accomplish on this site and how does it relate to your long term goals?
+	</div>
+	<div class="clear" id="explain-container" style="display: none;">
+		<div id="char-count">0/100</div>
+		<div><textarea id="explain" rows="4" cols="50"></textarea></div>
+
+		<div class="clear" class="clear" id="question5" style="display: none;">
+			Do you still think you should be visiting this site?
+			<div id="buttons">
+				<span id="timer"></span>
+				<button id="yes3">Yes</button>
+				<button id="no3">No</button>
+			</div>
+		</div>
+
+		<section id="timeSection" style="display: none;">
+			<div class="clear">
+				<div><label for="unblockTime">How long do you need to be on this site?</label></div>
+			</div>
+			<div class="clear">
+				<input type="range" id="unblockTime" value="10" min="5" max="90" step="5">
+				<output for="unblockTime" id="unblockTimeOutput"></output>
+			</div>
+		</section>
+
+		<div><button id="submit" style="display: none;">Submit</button></div>
+	</div>
+</div>
+</body>
+</html>

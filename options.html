@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ReflectBlock options</title>
+	<style>
+		section {
+			margin: 10px;
+		}
+
+		textarea {
+			width: 100%;
+			height: 5em;
+		}
+
+		#flash {
+			color: green;
+		}
+
+		.note {
+			font-size: 50%;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+
+	<section>
+		<div>
+			<div><label for="charCount">Character Count</label></div>
+			<em class="note">You must write an explanation at least this many characters to visit a distracting site.</em>
+		</div>
+
+		<div>
+			<input type="range" id="charCount" min="50" max="800" step="10">
+			<output for="charCount" id="charCountOutput"></output>
+		</div>
+	</section>
+
+	<section>
+		<div>
+			<div><label for="redirecturl">Redirect URL</label></div>
+			<em class="note">
+				Distracting sites will be redirected to this URL after their unblock window has expired.
+			</em>
+		</div>
+
+		<div><input type="text" id="redirecturl" value="trello.com"></div>
+	</section>
+
+	<section>
+		<div>
+			<div><label for="blocklist">Blocklist</label></div>
+			<em class="note">
+				Comma separated list of domains to block (e.g. facebook.com)
+			</em>
+		</div>
+
+		<div>
+			<textarea id="blocklist"></textarea>
+		</div>
+	</section>
+
+	<section>
+		<div>
+			<button id="saveOptions">Save</button>
+			<span id="flash"></span>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="defaults.js"></script>
+	<script type="text/javascript" src="options.js"></script>
+</body>
+</html>
+
+
+
